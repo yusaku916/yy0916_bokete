@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  get 'posts/index'
+  get 'posts/new' => 'posts#new'
   devise_for :users
   get 'home/index'
   get 'home/show'
+  post 'posts'  =>  'posts#create'
   get 'users/sign_out' => 'users#sign_out'
-  root to: "home#index"
+  root to: "posts#index"
 
   # devise_for :users, :controllers => {
   #   :registrations => 'users/registrations',

@@ -1,0 +1,54 @@
+.header
+  .header_logo
+    BOKETE
+  %button{"data-modal": "delete-item", "data-open": "modal", class: "header_user_btn"}
+    = link_to '田中直樹', "URL", class: "header_user_name"
+  %button{"data-modal": "delete-item", "data-open": "modal", class: "post_theme"}
+    = link_to 'お題を投稿', "URL", class: "post_theme_btn"
+%main.main_boke_contant
+  .boke_box
+    .box_user_name
+      投稿者:　田中直樹
+    .box_theme
+      お題: この写真のタイトルは？
+    .boke_image
+      = image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Bristol.zoo.western.lowland.gorilla.arp.jpg/500px-Bristol.zoo.western.lowland.gorilla.arp.jpg"
+  .answer_box
+    みんなの回答
+    .answer-small-box
+      .answer_user_name
+        遠藤章造
+      .answer-body
+        .answer_text
+          浜田
+        %i.icon-balloon
+    .answer-small-box
+      .answer_user_name
+        方正
+      .answer-body
+        .answer_text
+          松本
+        %i.icon-balloon
+  .boke_box
+    .box_user_name
+      投稿者:　田中直樹
+    .box_theme
+      お題: この写真のタイトルは？
+    .boke_image
+      = image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Bristol.zoo.western.lowland.gorilla.arp.jpg/500px-Bristol.zoo.western.lowland.gorilla.arp.jpg"
+  .answer_box
+    みんなの回答
+    .answer-small-box
+      .answer_user_name
+        遠藤章造
+      .answer-body
+        .answer_text
+          浜田
+        %i.icon-balloon
+    .answer-small-box
+      .answer_user_name
+        方正
+      .answer-body
+        .answer_text
+          松本
+        %i.icon-balloon
