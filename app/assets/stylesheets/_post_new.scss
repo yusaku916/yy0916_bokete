@@ -1,0 +1,52 @@
+.container{
+  display: block;
+  padding: 0 100px;
+  margin-top: 20px;
+}
+
+.container span{
+  margin-left: 10px;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+
+h3{
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(31, 31, 160);
+  text-shadow: 2px 2px 2px black;
+}
+.image_url{
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  border-color: rgb(204, 204, 204);
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgb(202, 199, 199);
+}
+.text_area{
+  font-size: 30px;
+  height: 100px;
+  width: 100%;
+  border-color: rgb(204, 204, 204);
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgb(202, 199, 199);
+}
+.post_btn{
+  margin-left: calc(50% - 150px);
+  height: 60px;
+  width: 300px;
+  font-size: 40px;
+  background-color: rgb(202, 199, 199);
+  border-radius: 6px;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(92, 91, 91);
+}

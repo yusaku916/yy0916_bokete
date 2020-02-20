@@ -2,7 +2,9 @@
   .container
     = form_tag('/posts', method: :post) do
       %h3
-        投稿する
-      %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text"}/
-      %textarea{:name => "theme", :placeholder => "text", :rows => "10"}
-      %input{:type => "submit", :value => "SENT"}/
+        投稿内容
+      %span 画像
+      %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text", :class => "image_url"}/
+      %span お題
+      %textarea{:name => "theme", :placeholder => "text", :rows => "10", :class => "text_area"}
+      %input{:type => "submit", :value => "投稿する", :class => "post_btn"}/
