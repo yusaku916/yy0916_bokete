@@ -40,6 +40,11 @@ a {
   text-align: center;
   margin-top: 20px;
 }
+
+.boke_image img {
+  width: 80%;
+}
+
 .box_user_name{
   font-size: 20px;
 }
@@ -47,7 +52,7 @@ a {
   font-size: 30px;
 }
 .answer_box{
-  margin: 10px 0 0 50px;
+  margin: 10px 0 0 10%;
   font-size: 24px;
 }
 .answer_user_name{
@@ -61,7 +66,8 @@ a {
 
 .answer-body{
   position: relative;
-  width: calc(100% - 56px);
+  // width: calc(100% - 56px);
+  width: 89%;
   padding: 16px;
   background: #eef0f4;
   border-radius: 15px;
@@ -88,10 +94,18 @@ i {
   font-size: 18px;
   background-color: rgb(68, 147, 250);
   border-radius: 6px;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px rgb(201, 87, 87);
 }
 .post_theme_btn{
   color: white;
   width: 100px;
   font-weight: bold;
+}
+.post_all{
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+}
+.pagenate{
+  text-align: center;
 }
