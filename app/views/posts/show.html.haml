@@ -1,0 +1,25 @@
+.boke_box
+  .box_user_name
+    投稿者:
+    = @user.email
+  .box_theme
+    お題: 
+    = @post.theme
+  .boke_image
+    = image_tag @post.image
+.answer_box
+  みんなの回答
+  .answer-small-box
+    .answer_user_name
+      遠藤章造
+    .answer-body
+      .answer_text
+        浜田
+      %i.icon-balloon
+  .answer-small-box
+    .answer_user_name
+      方正
+    .answer-body
+      .answer_text
+        松本
+      %i.icon-balloon
