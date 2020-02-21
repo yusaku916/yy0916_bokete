@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # get 'posts/show' => "posts#show"
   post 'posts'  =>  'posts#create'
   resources :posts, only: [:show]
+  resources :answers
   get 'users/sign_out' => 'users#sign_out'
   root to: "posts#index"
 

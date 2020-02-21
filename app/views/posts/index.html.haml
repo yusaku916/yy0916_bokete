@@ -16,8 +16,7 @@
         投稿者: 
         = User.find(posts.user_id).username
       .box_theme
-        お題: 
-        = posts.theme
+        = link_to "お題: #{posts.theme}", post_path(posts)
       .boke_image
         = image_tag posts.image
     .answer_box
