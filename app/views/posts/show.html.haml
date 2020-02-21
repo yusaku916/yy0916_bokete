@@ -9,17 +9,16 @@
     = image_tag @post.image
 .answer_box
   みんなの回答
-  .answer-small-box
-    .answer_user_name
-      遠藤章造
-    .answer-body
-      .answer_text
-        浜田
-      %i.icon-balloon
-  .answer-small-box
-    .answer_user_name
-      方正
-    .answer-body
-      .answer_text
-        松本
-      %i.icon-balloon
+  - @answers.each do |kaitou|
+    .answer-small-box
+      .answer_user_name
+        %a{:href => "/users/#{@post.user.id}"}= kaitou.user.username
+        .answer-body
+          .answer_text
+            = kaitou.answer
+        %hr/
+  = form_for [@post, @answer] do |f|
+    %textarea{:name => "answer", :placeholder => "text", :rows => "10", :class => "post_text_area", :required => true}
+      -# = f.text_field :name => "answers", class="text_area" required :true
+        %br/
+    %input{:type => "submit", :value => "回答する", :class => "answer_post_btn"}/

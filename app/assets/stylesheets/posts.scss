@@ -61,7 +61,7 @@ a {
   margin: 10px 0 0 10%;
   font-size: 24px;
 }
-.answer_user_name{
+.answer_user_name a{
   font-size: 30px;
   
   display: flex;
@@ -130,4 +130,27 @@ i {
 }
 .pagenate{
   text-align: center;
+}
+.post_text_area{
+  font-size: 30px;
+  height: 100px;
+  border-color: #cccccc;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #cac7c7;
+  width: 89%;
+}
+.answer_post_btn{
+  margin-left: calc(45% - 150px);
+  height: 60px;
+  width: 300px;
+  font-size: 40px;
+  margin-bottom: 30px;
+  background-color: #cac7c7;
+  border-radius: 6px;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #5c5b5b;
 }
