@@ -18,9 +18,6 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = User.find(@post.user_id)
-    @answers = Answer.where(post_id: @post.id)
-    # @answers = @answer1.answer
-    @answer = Answer.new
   end
 
   private

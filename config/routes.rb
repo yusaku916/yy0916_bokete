@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
+  get 'posts/index'
   get 'posts/new' => 'posts#new'
   devise_for :users
   get 'home/index'
   get 'home/show'
   # get 'posts/show' => "posts#show"
   post 'posts'  =>  'posts#create'
-  resources :posts, only: [:index, :show, :create] do
-    resources :answers, only: [:create]
-  end
-  resources :users, only: [:index, :show]
+  resources :posts, only: [:show]
+  resources :answers
   get 'users/sign_out' => 'users#sign_out'
   root to: "posts#index"
 
