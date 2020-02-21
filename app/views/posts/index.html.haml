@@ -22,20 +22,17 @@
         = image_tag posts.image
     .answer_box
       みんなの回答
-      .answer-small-box
-        .answer_user_name
-          遠藤章造
-        .answer-body
-          .answer_text
-            浜田
-          %i.icon-balloon
-      .answer-small-box
-        .answer_user_name
-          方正
-        .answer-body
-          .answer_text
-            松本
-          %i.icon-balloon
+      -num = 0
+      - Answer.where(post_id: posts).each do |kaitou|
+        .answer-small-box
+          .answer_user_name
+            = kaitou.user.username
+            .answer-body
+              .answer_text
+                = kaitou.answer
+            %hr/
+        -num += 1
+        -break if num== 3
     .answer_create_btn
       = link_to 'このお題に答える', post_path(posts)
     .other_find

@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   def index
     @posts = Post.all.page(params[:page]).per(5)
-    @answers = Answer.where(post_id: @posts)
+    # @answers = Answer.where(post_id: @posts)
   end
 
   def new

@@ -12,7 +12,7 @@
   - @answers.each do |kaitou|
     .answer-small-box
       .answer_user_name
-        %a{:href => "/users/#{@post.user.id}"}= kaitou.user.username
+        = kaitou.user.username
         .answer-body
           .answer_text
             = kaitou.answer
