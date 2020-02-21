@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
   get 'home/show'
-  get 'posts/show' => "posts#show"
+  # get 'posts/show' => "posts#show"
   post 'posts'  =>  'posts#create'
   resources :posts, only: [:show]
   get 'users/sign_out' => 'users#sign_out'
