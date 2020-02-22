@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = User.find(@post.user_id)
-    @answers = Answer.where(post_id: @post.id)
+    @answers = Answer.where(post_id: @post.id).order(id: :desc)
     @answer = Answer.new
   end
 

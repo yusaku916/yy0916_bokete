@@ -1,0 +1,56 @@
+.user_create_theme
+  .user_create_theme_all
+    -if current_user.id == @user.id
+      あなたのお題
+    -else
+      = @user.username
+      さんの最新のお題
+  - @users_theme.each do |users|
+    .boke_box
+      .box_theme
+        お題: 
+        = users.theme
+      .boke_image
+        = image_tag users.image
+    .answer_box
+      みんなの回答
+      - Answer.where(post_id: users.id).order(id: :desc).limit(3).each do |kaitou|
+        .answer-small-box
+          .answer_user_name
+            = kaitou.user.username
+            .answer-body
+              .answer_text
+                = kaitou.answer
+            %hr/
+    .other_find_userpage
+      = link_to 'もっと見る', post_path(users)
+.user_answer
+  .user_create_theme_all
+    -if current_user.id == @user.id
+      あなたが回答したお題
+    -else
+      = @user.username
+      さんが最近回答したお題
+  - @users_answer.each do |post_answer|
+    - Post.where(id: post_answer.post_id).each do |users|
+      .boke_box
+        .box_theme
+          お題: 
+          = users.theme
+        .boke_image
+          = image_tag users.image
+      .answer_box
+        .answer-small-box
+          .answer_user_name
+            = @user.username
+            .answer-body
+              .answer_text
+                = post_answer.answer
+            %hr/
+      .other_find_userpage2
+        = link_to '他の人の回答を見る', post_path(users)
+.a
+  -# = link_to 'ログアウト', users_sign_out_path
+  = link_to users_sign_out_path, method: :delete, class: "header__lower--rightbox__log_out--btn" do
+    ログアウト
+

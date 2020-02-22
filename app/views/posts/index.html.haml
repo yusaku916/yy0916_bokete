@@ -4,7 +4,7 @@
   .username
     %span ニックネーム:
   %button{"data-modal": "delete-item", "data-open": "modal", class: "header_user_btn"}
-    = link_to current_user.username, "URL", class: "header_user_name"
+    = link_to current_user.username, user_path(current_user), class: "header_user_name"
   %button{"data-modal": "delete-item", "data-open": "modal", class: "post_theme"}
     = link_to 'お題を投稿', posts_new_path, class: "post_theme_btn"
 %main.main_boke_contant
@@ -23,7 +23,7 @@
     .answer_box
       みんなの回答
       -num = 0
-      - Answer.where(post_id: posts).each do |kaitou|
+      - Answer.where(post_id: posts).order(id: :desc).each do |kaitou|
         .answer-small-box
           .answer_user_name
             = kaitou.user.username
