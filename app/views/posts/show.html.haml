@@ -6,7 +6,7 @@
     お題: 
     = @post.theme
   .boke_image
-    = image_tag @post.image
+    = image_tag @post.image.to_s
 .answer_box
   みんなの回答
   - @answers.each do |kaitou|

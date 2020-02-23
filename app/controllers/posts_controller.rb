@@ -7,13 +7,18 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
     # if user_signed_in?
     #   redirect_to new_user_session
     # end
   end
 
   def create
-    Post.create(image: post_params[:image], theme: post_params[:theme], user_id: current_user.id)
+    @post = Post.create(image: post_params[:image], theme: post_params[:theme], user_id: current_user.id)
+    if !(@post.save)
+      redirect_to posts_new_path
+    else
+    end
   end
 
   def show
@@ -25,6 +30,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.permit(:image, :theme)
+    params.require(:post).permit(:image, :theme)
   end
+
 end

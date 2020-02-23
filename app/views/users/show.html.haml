@@ -11,7 +11,7 @@
         お題: 
         = users.theme
       .boke_image
-        = image_tag users.image
+        = image_tag users.image.to_s
     .answer_box
       みんなの回答
       - Answer.where(post_id: users.id).order(id: :desc).limit(3).each do |kaitou|
@@ -38,7 +38,7 @@
           お題: 
           = users.theme
         .boke_image
-          = image_tag users.image
+          = image_tag users.image.to_s
       .answer_box
         .answer-small-box
           .answer_user_name

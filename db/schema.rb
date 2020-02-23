@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_02_21_162457) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "theme"
     t.integer "user_id"
-    t.text "image"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

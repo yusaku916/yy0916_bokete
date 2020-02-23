@@ -1,10 +1,11 @@
 .contents.row
   .container
-    = form_tag('/posts', method: :post) do
+    = form_for @post do |f|
       %h3
         投稿内容
       %span 画像
-      %input{:autofocus => "true", :name => "image", :placeholder => "Image Url", :type => "text", :class => "image_url"}/
+      = f.label :image, :name => "image", :autofocus => "true"
+      = f.file_field :image
       %span お題
-      %textarea{:name => "theme", :placeholder => "text", :rows => "10", :class => "text_area"}
+      = f.text_field :theme, :class => "text_area",:placeholder => "お題を入力", :rows => "10"
       %input{:type => "submit", :value => "投稿する", :class => "post_btn"}/
