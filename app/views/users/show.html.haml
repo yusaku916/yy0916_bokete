@@ -1,3 +1,10 @@
+.header
+  .header_logo
+    BOKETE
+  %button{"data-modal": "delete-item", "data-open": "modal", class: "log_out"}
+    = link_to "ログアウト", users_sign_out_path, method: :delete, class: "log_out_btn"
+  %button{"data-modal": "delete-item", "data-open": "modal", class: "post_theme"}
+    = link_to 'お題を投稿', posts_new_path, class: "post_theme_btn"
 .user_create_theme
   .user_create_theme_all
     -if current_user.id == @user.id
@@ -49,8 +56,4 @@
             %hr/
       .other_find_userpage2
         = link_to '他の人の回答を見る', post_path(users)
-.a
-  -# = link_to 'ログアウト', users_sign_out_path
-  = link_to users_sign_out_path, method: :delete, class: "header__lower--rightbox__log_out--btn" do
-    ログアウト
 

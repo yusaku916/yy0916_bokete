@@ -5,7 +5,7 @@
         投稿内容
       %span 画像
       = f.label :image, :name => "image", :autofocus => "true"
-      = f.file_field :image
+      = f.file_field :image, :class => "image_form"
       %span お題
       = f.text_field :theme, :class => "text_area",:placeholder => "お題を入力", :rows => "10"
       %input{:type => "submit", :value => "投稿する", :class => "post_btn"}/
