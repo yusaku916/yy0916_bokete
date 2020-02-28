@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # before_action :user_signed_in?, only: [:new]
   before_action :authenticate_user!
   def index
-    @posts = Post.all.page(params[:page]).per(5)
+    @posts = Post.all.page(params[:page]).order(id: :desc).per(5)
     # @answers = Answer.where(post_id: @posts)
   end
 
