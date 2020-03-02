@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: yy0916-bokete_production
-  username: yy0916-bokete
-  password: <%= ENV['YY0916-BOKETE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
