@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :posts, dependent: :destroy
   has_many :answers
+  validates :username, presence: true, length: { maximum: 6 }
 end
