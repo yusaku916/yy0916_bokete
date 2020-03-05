@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   def index
     @posts = Post.all.page(params[:page]).order(id: :desc).per(5)
     # @answers = Answer.where(post_id: @posts)
