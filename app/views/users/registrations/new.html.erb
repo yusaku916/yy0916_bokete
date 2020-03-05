@@ -4,7 +4,7 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :ユーザー名 %><br />
+    <%= f.label :"ユーザー名(6文字以内)" %><br />
     <%= f.text_field :username, autofocus: true, class: "
 input_form" %>
   </div>
