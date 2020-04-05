@@ -19,5 +19,4 @@
         %hr/
   = form_for [@post, @answer] do |f|
     %textarea{:name => "answer", :placeholder => "text", :rows => "10", :class => "post_text_area", :required => true}
-        %br/
     %input{:type => "submit", :value => "回答する", :class => "answer_post_btn"}/
